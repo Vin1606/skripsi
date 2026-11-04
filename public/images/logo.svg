@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
+  <rect width="80" height="80" fill="#ffffff" />
+  <rect x="1" y="1" width="78" height="78" fill="none" stroke="#9ccf9b" stroke-width="1" stroke-dasharray="3 2" />
+  <text x="40" y="17" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#d6332b">real indonesia</text>
+  <circle cx="40" cy="46" r="22" fill="#f2c230" />
+  <path d="M40 46 L40 24 A22 22 0 0 1 62 46 Z" fill="#d6332b" />
+  <path d="M40 46 L62 46 A22 22 0 0 1 40 68 Z" fill="#2a6fc0" />
+  <path d="M40 46 L40 68 A22 22 0 0 1 18 46 Z" fill="#3a9a4d" />
+  <circle cx="40" cy="46" r="8" fill="#ffffff" />
+</svg>

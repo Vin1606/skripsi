@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 720" preserveAspectRatio="xMidYMax slice">
+  <defs>
+    <filter id="blur" x="-30%" y="-60%" width="160%" height="220%">
+      <feGaussianBlur stdDeviation="9" />
+    </filter>
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" result="n" />
+      <feColorMatrix in="n" type="saturate" values="0" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.12" />
+      </feComponentTransfer>
+      <feComposite in2="SourceGraphic" operator="in" />
+    </filter>
+    <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#b9e2e6" />
+      <stop offset="1" stop-color="#9fd3dc" />
+    </linearGradient>
+    <linearGradient id="mtL" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5a86c2" />
+      <stop offset="1" stop-color="#6f9bd0" />
+    </linearGradient>
+    <linearGradient id="mtR" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6490c9" />
+      <stop offset="1" stop-color="#86aedb" />
+    </linearGradient>
+
+    <!-- Pola hutan pinus -->
+    <pattern id="forest" width="36" height="44" patternUnits="userSpaceOnUse">
+      <g transform="translate(10,0)">
+        <path d="M0 0 L6 12 L3 12 L7 23 L4 23 L9 38 L-9 38 L-4 23 L-7 23 L-3 12 L-6 12 Z" fill="#244f2b" />
+      </g>
+      <g transform="translate(27,5)">
+        <path d="M0 0 L6 12 L3 12 L7 23 L4 23 L9 38 L-9 38 L-4 23 L-7 23 L-3 12 L-6 12 Z" fill="#3d7a38" />
+      </g>
+    </pattern>
+
+    <!-- Satu pohon (untuk pohon yang lebih tinggi) -->
+    <symbol id="tree" viewBox="-10 0 20 38" overflow="visible">
+      <path d="M0 0 L6 12 L3 12 L7 23 L4 23 L9 38 L-9 38 L-4 23 L-7 23 L-3 12 L-6 12 Z" fill="#1f4a28" />
+    </symbol>
+  </defs>
+
+  <!-- Danau -->
+  <rect x="0" y="600" width="1440" height="120" fill="url(#lake)" />
+
+  <!-- Gunung kiri -->
+  <path d="M0 373 L60 350 L120 330 L190 300 L295 295 L330 312 L400 362 L470 410 L560 450 L640 485 L720 560 L0 560 Z" fill="url(#mtL)" />
+  <g fill="#d8b3a0" opacity="0.9">
+    <path d="M295 295 L340 322 L395 385 L430 440 L405 430 L370 385 L320 345 Z" />
+    <path d="M215 305 L250 340 L300 400 L330 470 L290 440 L250 380 L205 330 Z" opacity="0.8" />
+    <path d="M180 440 L260 470 L350 500 L300 510 L220 490 Z" fill="#e3c4ae" />
+    <path d="M110 345 L150 360 L190 410 L150 400 Z" fill="#b99a98" opacity="0.7" />
+  </g>
+  <path d="M0 440 C120 420 260 440 420 500 L420 560 L0 560 Z" fill="#7fa6d6" opacity="0.5" />
+
+  <!-- Gunung kanan -->
+  <path d="M633 485 L760 470 L900 440 L1000 380 L1060 352 L1111 345 L1160 372 L1230 400 L1330 410 L1440 422 L1440 600 L633 600 Z" fill="url(#mtR)" />
+  <g fill="#e4c0aa" opacity="0.9">
+    <path d="M1111 345 L1150 375 L1175 430 L1140 410 L1105 380 Z" />
+    <path d="M1000 385 L1050 372 L1090 410 L1060 460 L1030 430 Z" opacity="0.8" />
+    <path d="M830 450 L890 430 L930 470 L880 480 Z" fill="#f0d2bc" />
+  </g>
+
+  <!-- Pulau kiri -->
+  <path d="M0 535 C100 520 200 528 300 550 C420 575 560 600 680 640 C640 660 560 680 500 690 C400 700 150 690 0 700 Z" fill="#6d9a45" />
+  <path d="M0 535 C100 520 200 528 300 550 C420 575 560 600 680 640 C640 660 560 680 500 690 C400 700 150 690 0 700 Z" fill="url(#forest)" />
+  <use href="#tree" x="140" y="500" width="22" height="48" />
+  <use href="#tree" x="280" y="482" width="26" height="60" />
+  <use href="#tree" x="380" y="515" width="24" height="52" />
+  <use href="#tree" x="30" y="505" width="20" height="44" />
+
+  <!-- Pulau kanan -->
+  <path d="M773 575 C850 545 960 525 1080 535 C1200 545 1320 525 1440 535 L1440 700 C1300 690 1100 700 960 690 C860 680 790 640 773 575 Z" fill="#6d9a45" />
+  <path d="M773 575 C850 545 960 525 1080 535 C1200 545 1320 525 1440 535 L1440 700 C1300 690 1100 700 960 690 C860 680 790 640 773 575 Z" fill="url(#forest)" />
+  <use href="#tree" x="880" y="505" width="24" height="54" />
+  <use href="#tree" x="1010" y="490" width="26" height="60" />
+  <use href="#tree" x="1220" y="500" width="24" height="54" />
+  <use href="#tree" x="1380" y="498" width="22" height="50" />
+
+  <!-- Awan -->
+  <g fill="#f4f7fc" filter="url(#blur)" opacity="0.8">
+    <ellipse cx="215" cy="197" rx="70" ry="20" />
+    <ellipse cx="305" cy="255" rx="70" ry="22" />
+    <ellipse cx="1139" cy="150" rx="115" ry="34" />
+    <ellipse cx="1090" cy="175" rx="70" ry="20" />
+    <ellipse cx="1195" cy="372" rx="85" ry="18" />
+    <ellipse cx="1030" cy="528" rx="85" ry="30" />
+    <ellipse cx="1180" cy="555" rx="60" ry="14" />
+  </g>
+
+  <!-- Tekstur halus -->
+  <rect width="1440" height="720" fill="#888" filter="url(#grain)" opacity="0.6" />
+</svg>

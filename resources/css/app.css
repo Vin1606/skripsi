@@ -1,0 +1,16 @@
+/* =========================================================================
+   PENGATURAN UTAMA GAYA DESAIN & JENIS HURUF (TAILWIND CSS)
+   ========================================================================= */
+@import "tailwindcss";
+@source "../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php";
+@source "../../storage/framework/views/*.php";
+@source "../**/*.blade.php";
+@source "../**/*.js";
+
+/* Daftar jenis huruf (font) khusus yang dipakai di website:
+   - font-jost   : Dipakai untuk judul-judul bagian
+   - font-roboto : Dipakai untuk teks paragraf biasa */
+@theme {
+    --font-jost: "Jost", ui-sans-serif, system-ui, sans-serif;
+    --font-roboto: "Roboto", ui-sans-serif, system-ui, sans-serif;
+}
