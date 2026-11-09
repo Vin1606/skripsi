@@ -33,7 +33,7 @@
             </a>
 
             <h1 class="mt-4 font-jost text-2xl font-semibold uppercase tracking-[0.15em] text-[#2f5d1e]">
-                Portal Masuk
+                Portal Login
             </h1>
 
             <p class="mt-1 text-[13px] tracking-[0.02em] text-slate-500">
