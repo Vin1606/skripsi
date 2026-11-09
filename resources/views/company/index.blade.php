@@ -17,11 +17,29 @@
 <x-layout title="Home - Real Indonesia Satu">
 
     {{-- ================================================================== --}}
-    {{-- BAGIAN 0: BANNER UTAMA ATAS (HERO HEADER)                          --}}
-    {{-- Untuk mengubah gambar gunung atau tulisan besar di paling atas,    --}}
-    {{-- silakan buka file: resources/views/components/header.blade.php     --}}
+    {{-- BAGIAN 0: BANNER UTAMA ATAS (HERO BANNER)                          --}}
     {{-- ================================================================== --}}
-    <x-header />
+    <section
+        class="relative min-h-[80vh] overflow-hidden bg-[linear-gradient(90deg,#ffffff_0%,#dcefee_40%,#c3e5e5_100%)]">
+        <div class="absolute inset-0 bg-cover bg-bottom bg-no-repeat"
+            style="background-image: url('{{ asset('images/hero-mountains.svg') }}')">
+        </div>
+
+        <div class="relative z-10 flex flex-col items-center px-6 pt-[22vh] text-center">
+            <h1 class="font-jost text-[30px] font-medium uppercase tracking-[0.3em] text-[#057020]">
+                Real Indonesia Satu
+            </h1>
+            <p class="mt-1 font-jost text-[18px] uppercase tracking-[0.3em] text-[#000000]">
+                Your Professional Pest Control Services
+            </p>
+            <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+                <a href="#kontak"
+                    class="bg-[#6a9f3a] px-8 py-2 text-[17px] uppercase tracking-[0.15em] text-white transition hover:bg-[#587f30]">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </section>
 
 
     {{-- ================================================================== --}}

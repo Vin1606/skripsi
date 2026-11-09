@@ -17,6 +17,7 @@ Route::get('/profile', [CompanyController::class, 'index'])->name('company.index
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 
 Route::post('/login', [AuthController::class, 'LoginProcess'])->name('login.process');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // 3. Halaman Register Sistem Inventory (resources/views/auth/register.blade.php)
 Route::get('/register', [AuthController::class, 'register'])->name('register');

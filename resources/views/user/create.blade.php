@@ -7,7 +7,7 @@
 <x-layout title="Tambah Pengguna - Real Indonesia Satu">
 
     <section id="user-create"
-        class="min-h-screen bg-[linear-gradient(180deg,#dcefee_0%,#f8fbfb_35%,#ffffff_100%)] pt-36 pb-16">
+        class="min-h-screen bg-[linear-gradient(180deg,#dcefee_0%,#f8fbfb_35%,#ffffff_100%)] py-10">
         <div class="mx-auto max-w-3xl px-6">
 
             {{-- ============================================================== --}}

@@ -3,7 +3,7 @@
 {{-- Berisi teks hak cipta (copyright) dan tombol kembali ke paling atas.   --}}
 {{-- ====================================================================== --}}
 
-<footer class="bg-white py-10 text-center text-[14px] text-slate-600">
+<footer class="shrink-0 border-t border-slate-200/70 bg-white py-3.5 text-center text-[13px] text-slate-600">
 
     {{-- Teks Hak Cipta (Copyright) --}}
     <p>&copy;2025 www.realpestcontrol-indonesia.com. All right reserved.</p>

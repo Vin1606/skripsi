@@ -4,11 +4,11 @@
 {{-- kerangka utama <x-layout>.                                             --}}
 {{-- ====================================================================== --}}
 
-<x-layout title="User - Real Indonesia Satu">
+<x-layout title="User - Real Indonesia Satu" :scrollable="false">
 
     <section id="user"
-        class="min-h-screen bg-[linear-gradient(180deg,#dcefee_0%,#f8fbfb_35%,#ffffff_100%)] pt-36 pb-16">
-        <div class="mx-auto max-w-6xl px-6">
+        class="flex h-full flex-1 flex-col overflow-hidden bg-[linear-gradient(180deg,#dcefee_0%,#f8fbfb_35%,#ffffff_100%)] py-6">
+        <div class="mx-auto flex min-h-0 w-full max-w-6xl flex-1 flex-col px-6">
 
             {{-- ============================================================== --}}
             {{-- 1. JUDUL HALAMAN & TOMBOL TAMBAH PENGGUNA                      --}}
