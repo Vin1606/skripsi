@@ -37,22 +37,22 @@
             </h1>
 
             <p class="mt-1 text-[13px] tracking-[0.02em] text-slate-500">
-                Sistem Inventory Barang Real Indonesia satu
+                Sistem Inventory Barang Real Indonesia Revisi
             </p>
         </div>
 
         {{-- Pesan Sukses Setelah Registrasi Berhasil --}}
         @if (session('success'))
-        <div class="mt-5 rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-[13px] text-green-700">
-            {{ session('success') }}
-        </div>
+            <div class="mt-5 rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-[13px] text-green-700">
+                {{ session('success') }}
+            </div>
         @endif
 
         {{-- Pesan Peringatan Jika Login Gagal (Jika Nanti Dihubungkan ke Database) --}}
         @if ($errors->any())
-        <div class="mt-5 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-[13px] text-red-700">
-            {{ $errors->first() }}
-        </div>
+            <div class="mt-5 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-[13px] text-red-700">
+                {{ $errors->first() }}
+            </div>
         @endif
 
         {{-- ============================================================== --}}
