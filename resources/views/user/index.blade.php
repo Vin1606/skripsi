@@ -16,7 +16,7 @@
             <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-center">
                 <div>
                     <h1 class="font-jost text-2xl font-semibold uppercase tracking-[0.12em] text-[#2f5d1e] sm:text-3xl">
-                        Daftar Pengguna
+                        List Pengguna
                     </h1>
                     <p class="mt-1 text-[14px] text-slate-600">
                         Kelola seluruh data akun Admin dan Staf pada Sistem Inventory PT Real Indonesia Satu.
