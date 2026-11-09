@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 // =========================================================================
-// PENGATUR HALAMAN PROFIL PERUSAHAAN (COMPANY CONTROLLER)
+// PENGATUR HALAMAN PROFIL PERUSAHAAN & LOGIN (COMPANY CONTROLLER)
 // Menghubungkan alamat URL (route) dengan tampilan halaman (view).
 // =========================================================================
 class CompanyController extends Controller
@@ -18,8 +18,8 @@ class CompanyController extends Controller
         $title = 'Real Indonesia Satu';
 
         return view('company.index', compact('title'));
-    }
 
+    }
     /**
      * Menampilkan form tambah data baru (belum digunakan).
      */

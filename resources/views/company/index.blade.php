@@ -331,8 +331,9 @@
 
             {{-- -------------------------------------------------------------- --}}
             {{-- 5A. FORMULIR PESAN PELANGGAN (SEBELAH KIRI)                    --}}
+            {{-- Saat tombol Submit diklik, isi form akan dikirim ke WhatsApp.  --}}
             {{-- -------------------------------------------------------------- --}}
-            <form action="#kontak" method="GET" class="space-y-4 text-[13px] text-slate-700">
+            <form id="contact-wa-form" action="#kontak" method="GET" class="space-y-4 text-[13px] text-slate-700">
 
                 {{-- Kolom Isian: Nama Depan & Nama Belakang --}}
                 <div>
@@ -539,6 +540,44 @@
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
+
+        {{-- Kode pengirim isi formulir kontak langsung ke WhatsApp (JavaScript) --}}
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const contactForm = document.getElementById('contact-wa-form');
+                if (!contactForm) return;
+
+                // Nomor WhatsApp tujuan perusahaan (format diawali kode negara 62 tanpa tanda +)
+                const targetWaNumber = '6285881700579';
+
+                contactForm.addEventListener('submit', (event) => {
+                    event.preventDefault();
+
+                    const formData = new FormData(contactForm);
+                    const firstName = (formData.get('first_name') || '').toString().trim();
+                    const lastName = (formData.get('last_name') || '').toString().trim();
+                    const fullName = [firstName, lastName].filter(Boolean).join(' ');
+                    const email = (formData.get('email') || '').toString().trim();
+                    const whatsapp = (formData.get('whatsapp') || '').toString().trim() || '-';
+                    const address = (formData.get('address') || '').toString().trim() || '-';
+                    const problem = (formData.get('problem') || '').toString().trim() || '-';
+
+                    const message = [
+                        'Halo PT Real Indonesia Satu, saya ingin berkonsultasi mengenai layanan pengendalian hama:',
+                        '',
+                        `*Nama:* ${fullName}`,
+                        `*Email:* ${email}`,
+                        `*No. WhatsApp:* ${whatsapp}`,
+                        `*Alamat:* ${address}`,
+                        `*Keluhan / Masalah Hama:*`,
+                        problem,
+                    ].join('\n');
+
+                    const waUrl = `https://wa.me/${targetWaNumber}?text=${encodeURIComponent(message)}`;
+                    window.open(waUrl, '_blank', 'noopener,noreferrer');
+                });
+            });
+        </script>
 
     </section>
 

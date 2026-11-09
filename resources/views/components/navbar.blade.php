@@ -14,22 +14,21 @@
     //              #kontak       -> Bagian Form Kontak & Talk To Us
     // - 'active' : Ubah ke true jika ingin teks menu berwarna hijau, false jika biru tua
     $links = [
-        ['label' => 'Home', 'href' => '#beranda', 'active' => true],
-        ['label' => 'Services', 'href' => '#layanan', 'active' => false],
-        ['label' => 'About', 'href' => '#tentang-kami', 'active' => false],
-        ['label' => 'Contact', 'href' => '#kontak', 'active' => false],
+        ['label' => 'User', 'href' => '#user', 'active' => true],
+        // ['label' => 'Services', 'href' => '#layanan', 'active' => false],
+        // ['label' => 'About', 'href' => '#tentang-kami', 'active' => false],
+        // ['label' => 'Contact', 'href' => '#kontak', 'active' => false],
     ];
 @endphp
 
 {{-- Baris navigasi transparan yang menempel di bagian paling atas banner utama --}}
 <nav class="absolute inset-x-0 top-0 z-50">
-    <div class="mx-auto flex max-w-300 items-center justify-between px-4 pt-10">
+    <div class="mx-auto flex max-w-300 items-center justify-between px-10 pt-10">
 
         {{-- Bagian Kiri: Logo Perusahaan (file gambar ada di public/images/logo.png) --}}
-        <a href="#beranda" class="block">
-            <img src="{{ asset('images/logo.png') }}"
-                alt="{{ config('app.name', 'Real Indonesia Satu') }}"
-                class="h-20 w-30 object-contain">
+        <a href="#user" class="block">
+            <img src="{{ asset('images/logo.png') }}" alt="{{ config('app.name', 'Real Indonesia Satu') }}"
+                class="h-20 w-20 object-contain">
         </a>
 
         {{-- Bagian Kanan: Daftar Tombol Menu --}}
