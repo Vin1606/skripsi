@@ -37,7 +37,7 @@
             </h1>
 
             <p class="mt-1 text-[13px] tracking-[0.02em] text-slate-500">
-                Sistem Inventory Barang Real Indonesia 1
+                Sistem Inventory Barang Real Indonesia satu
             </p>
         </div>
 
